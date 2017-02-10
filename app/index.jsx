@@ -1,10 +1,6 @@
 import React from 'react';
 import {render} from 'react-dom';
 
-class HelloMessage extends React.Component {
-    render() {
-        return <div>Hello world 2 + 2 = {2+2}</div>;
-    }
-}
+import HelloMessage from './HelloMessage'
 
-render(<HelloMessage/>, document.getElementById('app'));
+render(<div><HelloMessage/></div>, document.getElementById('app'));
