@@ -1,14 +1,14 @@
-import React from 'react'
+import React from 'react';
 
 class TextInput extends React.Component {
-    render() {
-        return (
-            <input type="text" defaultValue="Type something" ref="myTextField" />
-        )
-    }
-    getInputValue() {
-        return this.refs.myTextField.value
-    }
+  getInputValue() {
+    return this.textValue.value;
+  }
+  render() {
+    return (
+      <input type="text" defaultValue="Type something" ref={(c) => { this.textValue = c; }} />
+    );
+  }
 }
 
-export default TextInput
+export default TextInput;

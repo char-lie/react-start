@@ -1,9 +1,15 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 
-class HelloMessage extends React.Component {
-    render() {
-        return <div>{this.props.text}</div>;
-    }
-}
+const HelloMessage = ({ text }) => (
+  <div>{text}</div>
+);
 
-export default HelloMessage
+HelloMessage.propTypes = {
+  text: PropTypes.string,
+};
+
+HelloMessage.defaultProps = {
+  text: '',
+};
+
+export default HelloMessage;

@@ -1,12 +1,12 @@
-const MAKE_TEXT = 'MAKE_TEXT'
+const MAKE_TEXT = 'MAKE_TEXT';
 
 export const Actions = {
-    MAKE_TEXT
-}
+  MAKE_TEXT,
+};
 
 export function makeText(text) {
-    return {
-        type: MAKE_TEXT,
-        payload: text
-    }
+  return {
+    type: MAKE_TEXT,
+    payload: text,
+  };
 }
