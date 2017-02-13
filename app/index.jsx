@@ -1,7 +1,5 @@
-import React from 'react';
 import {render} from 'react-dom';
 
-import HelloButton from './HelloButton'
-import HelloMessage from './HelloMessage'
+import DOMStructure from './components/index'
 
-render(<div><HelloMessage/><HelloButton/></div>, document.getElementById('app'));
+render(DOMStructure, document.getElementById('app'));
