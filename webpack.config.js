@@ -4,7 +4,22 @@ const webpack = require('webpack');
 module.exports = {
     devtool: 'inline-source-map',
     context: path.join(__dirname, 'app'),
-    entry: './index',
+    entry: {
+        main: './index',
+        vendor: [
+            'react',
+            'react-dom',
+            'redux',
+            'react-redux',
+        ]
+    },
+    plugins: [
+        new webpack.optimize.CommonsChunkPlugin({
+            name: 'vendor',
+            filename: 'vendors.js',
+            minChunks: Infinity
+        })
+    ],
     output: {
         path: path.join(__dirname, 'build'),
         filename: 'bundle.js'
