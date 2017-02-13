@@ -1,14 +1,14 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 
-class ButtonBlock extends React.Component {
-    render() {
-        return (
-            <div>
-                <button>Set text1</button>
-                <button>Set text2</button>
-            </div>
-        )
-    }
+const ButtonBlock = ({onClick}) => (
+    <div>
+        <button onClick={() => onClick('Text1')}>Set text1</button>
+        <button onClick={() => onClick('Text2')}>Set text2</button>
+    </div>
+)
+
+ButtonBlock.propTypes = {
+    onClick: PropTypes.func.isRequired
 }
 
 export default ButtonBlock
