@@ -21,7 +21,7 @@ app.options('/get-random', (req, res) => {
 app.get('/get-random', (req, res) => {
     const result = [];
     for (let i = 0; i < 10; i++) {
-        result.push(Math.random());
+        result.push({ id: i, value: Math.random() });
     }
     res.header("Access-Control-Allow-Origin", "http://localhost:8080");
     res.json({data: result});
