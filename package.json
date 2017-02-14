@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
-    "watch": "webpack --watch"
+    "watch": "webpack --watch",
+    "server": "server/index.js",
+    "watch-server": "nodemon server/index.js"
   },
   "author": "",
   "license": "ISC",
@@ -32,6 +34,7 @@
     "eslint-plugin-react": "^6.9.0",
     "jsx-loader": "^0.13.2",
     "node-sass": "^4.5.0",
+    "nodemon": "^1.11.0",
     "sass-loader": "^5.0.1",
     "style-loader": "^0.13.1",
     "webpack": "^2.2.1"
