@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
-    "watch": "webpack --watch",
+    "watch": "webpack-dev-server -w --output-public-path=/build/",
     "server": "server/index.js",
     "watch-server": "nodemon server/index.js"
   },
@@ -37,6 +37,7 @@
     "nodemon": "^1.11.0",
     "sass-loader": "^5.0.1",
     "style-loader": "^0.13.1",
-    "webpack": "^2.2.1"
+    "webpack": "^2.2.1",
+    "webpack-dev-server": "^2.3.0"
   }
 }
