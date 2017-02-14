@@ -2,10 +2,10 @@ import React, { PropTypes } from 'react';
 
 class TableGrid extends React.Component {
   renderItems() {
-    return this.props.items.map((item, key) => (
-      <tr key={`tr_${key + 1}`}>
-        <td>{key}</td>
-        <td>{item}</td>
+    return this.props.items.map(item => (
+      <tr key={item.id}>
+        <td>{item.id}</td>
+        <td>{item.value}</td>
       </tr>
     ));
   }
@@ -22,7 +22,7 @@ class TableGrid extends React.Component {
 }
 
 TableGrid.propTypes = {
-  items: PropTypes.arrayOf(PropTypes.number),
+  items: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.number)),
 };
 
 TableGrid.defaultProps = {

@@ -48,7 +48,7 @@ class Application extends React.Component {
 Application.propTypes = {
   dispatch: PropTypes.func.isRequired,
   text: PropTypes.string,
-  items: PropTypes.arrayOf(PropTypes.number),
+  items: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.number)),
 };
 
 Application.defaultProps = {
