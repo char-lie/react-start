@@ -1,12 +1,10 @@
-const MAKE_TEXT = 'MAKE_TEXT';
-
-export const Actions = {
-  MAKE_TEXT,
-};
+export const Actions = Object.freeze({
+  MAKE_TEXT: 'MAKE_TEXT',
+});
 
 export function makeText(text) {
   return {
-    type: MAKE_TEXT,
+    type: Actions.MAKE_TEXT,
     payload: text,
   };
 }
